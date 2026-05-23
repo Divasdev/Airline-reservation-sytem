@@ -22,11 +22,6 @@ class Flight:
             f"{self.status:<12}"
         )
 
-
-
-
-
-
     def to_dict(self):
 
         return{

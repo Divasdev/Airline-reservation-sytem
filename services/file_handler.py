@@ -2,6 +2,8 @@
 # save_booking()
 # load_bookings()
 # cancel_booking()
+from models.booking import Booking
+
 
 import  json
 import os
@@ -19,6 +21,27 @@ def initialize_booking_file():
 
     else:
         print(f"{file_path} already exist")
+
+def save_booking(booking):
+
+    file_path = "data/bookings.json"
+
+    booking_data = booking.to_dict()
+
+    with open(file_path, "r") as file:
+        bookings = json.load(file)
+
+    bookings.append(booking_data)
+
+    with open(file_path, "w") as file:
+        json.dump(bookings, file, indent=4)
+    is_booked=True
+
+    print("Booking saved successfully!")
+
+
+
+
 
 
 
