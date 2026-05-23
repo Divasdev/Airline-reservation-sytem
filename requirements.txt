@@ -1,0 +1,3 @@
+requests        # AviationStack API calls
+resend          # Resend email API
+python-dotenv   # Load .env variables
